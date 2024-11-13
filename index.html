@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<!-- Embed YouTube dengan autoplay -->
+<iframe id="musikLatar" width="0" height="0"
+    src="https://www.youtube.com/embed/XcQb07nwle4&ab_channel=JuicyLuicy?autoplay=1&loop=1&playlist=XcQb07nwle4&ab_channel=JuicyLuicy"
+    frameborder="0" allow="autoplay" style="display:none;">
+</iframe>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Sempro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Halaman 1: Play Music -->
+    <div id="page1" class="page">
+        <h1>Selamat datang! Klik tombol Play untuk memulai musik</h1>
+        <div id="tungguPesan">
+            <button id="playButton">Play Music</button>
+            <p id="waitingMessage" style="display: none;">Mohon tunggu sampai musik dimulai...</p>
+        </div>
+        <button id="nextButton" style="display:none;" onclick="lanjutkan()">Next</button>
+    </div>
+
+    <!-- Halaman 2: Masukkan Nama -->
+    <div id="page2" class="page">
+        <h1>Masukkan Nama Anda</h1>
+        <input type="text" id="namaInput" placeholder="Masukkan nama Anda">
+        <button onclick="lanjutkan()">Lanjutkan</button>
+    </div>
+
+    <!-- Halaman 3: Ucapan dan Pesan -->
+    <div id="page3" class="page">
+        <h1 id="ucapan">Selamat Sempro, <span id="nama"></span>!</h1>
+        <button onclick="keHalamanPesan()">Lihat Pesan</button>
+    </div>
+
+    <!-- Halaman 4: Pesan-Pesan -->
+    <div id="page4" class="page">
+        <h2>Pesan-Pesan Untukmu</h2>
+        <div id="balonContainer"></div>
+        <div class="pesan-container">
+            <p>Semangat terus, jangan menyerah ya!</p>
+            <img src="images/gambar1.jpg" alt="Gambar 1">
+        </div>
+        <div class="pesan-container">
+            <p>Kamu pasti bisa mencapai impianmu!</p>
+            <img src="images/gambar2.jpg" alt="Gambar 2">
+        </div>
+        <div class="pesan-container">
+            <p>Jangan lupa istirahat, kesehatan nomor satu!</p>
+            <img src="images/gambar3.jpg" alt="Gambar 3">
+        </div>
+        <div class="pesan-container">
+            <p>Selalu percaya diri dan yakin pada kemampuanmu!</p>
+            <img src="images/gambar4.jpg" alt="Gambar 4">
+        </div>
+        <div class="pesan-container">
+            <p>Kita semua bangga padamu, sukses selalu!</p>
+            <img src="images/gambar5.jpg" alt="Gambar 5">
+        </div>
+        <button onclick="keHalamanAwal()">Kembali ke Awal</button>
+    </div>
+</body>
+
+</html>
