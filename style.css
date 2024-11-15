@@ -1,7 +1,7 @@
-/* Mengatur tema warna hitam dan merah */
+/* Mengatur tema warna dengan gradien monokrom (hitam, abu, putih, dark blue) */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background: linear-gradient(135deg, #000000, #333333, #777777, #1a1a2e, #ffffff);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -11,6 +11,7 @@ body {
     overflow: hidden;
     box-sizing: border-box;
 }
+
 
 /* Mengatur halaman dan menyembunyikan halaman lain */
 .page {
@@ -23,6 +24,22 @@ body {
     display: block;
 }
 
+/* Halaman 4: Mengaktifkan scroll tanpa menampilkan scrollbar */
+#page4 {
+    height: 100vh; /* Mengambil tinggi layar penuh */
+    overflow-y: auto; /* Mengaktifkan scroll secara vertikal */
+    padding: 20px;
+    box-sizing: border-box; /* Menghindari konten meluap */
+    -ms-overflow-style: none; /* Menghilangkan scrollbar pada Internet Explorer dan Edge */
+    scrollbar-width: none; /* Menghilangkan scrollbar pada Firefox */
+}
+
+/* Menghilangkan scrollbar pada Chrome, Safari, dan browser berbasis Webkit */
+#page4::-webkit-scrollbar {
+    display: none; /* Menghilangkan scrollbar */
+}
+
+
 /* Gaya input dan tombol */
 input[type="text"] {
     padding: 10px;
@@ -32,8 +49,8 @@ input[type="text"] {
     border-radius: 5px;
     background: #222;
     color: #fff;
-    width: 80%; /* Menyesuaikan lebar */
-    max-width: 400px; /* Menjaga input agar tidak terlalu besar */
+    width: 80%; 
+    max-width: 400px; 
     box-sizing: border-box;
 }
 
@@ -60,14 +77,10 @@ button:hover {
     animation: muncul 1s ease-in-out forwards;
 }
 
-.pesan-container p {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
+/* Mengatur ukuran gambar agar tetap responsif dan tidak terlalu besar */
 .pesan-container img {
     width: 200px;
-    height: 200px;
+    height: auto;
     border-radius: 10px;
     border: 3px solid #ff0000;
     animation: goyang 1s infinite alternate;
@@ -177,7 +190,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/* Pastikan animasi muncul pada pesan */
+/* Memastikan animasi muncul pada pesan */
 .pesan-container {
     animation: muncul 1.5s ease-in-out forwards;
 }
